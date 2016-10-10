@@ -62,16 +62,15 @@ function successFunction(data) {
     if(result[i].variable_2){ variable_2 = "'"+result[i].variable_2+"'"; }
     var txt = replaceString(myString,variable_1,variable_2);  
     WriteToPage(txt);
-    
   }
 }
+    
 function csvJSON(csv){
 
   var lines=csv.split("\n");
   var result = [];
   var headers=lines[0].split(",");
   for(var i=1;i<lines.length;i++){
-      
       if(lines[i].length !== 0){
 	  var obj = {};
 	  var currentline=lines[i].split(",");
@@ -81,25 +80,20 @@ function csvJSON(csv){
 	  }//end (var j=0;j<headers.length;j++)
     result.push(obj);
     }
-    
   }
-  
-  
   return result; 
-  
- }
+}
 
 function replaceString(temp, variable_1,variable_2){
   temp = temp.replace("%variable_1%",variable_1);
   temp = temp.replace("%variable_2%",variable_2);
- 
   return temp;
  }
+    
 function WriteToPage(temp){
   document.getElementById("output").innerHTML += temp;
  }
 
-    
 })();
 
 
