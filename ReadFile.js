@@ -5,9 +5,9 @@ function getDept(name){
 function getPerson(userid){
  return ApplicationEntity.getResultSet("Person").query("userID = '"+userid+"'").elements().item(1);  
 }
-var d='MCIT';
+var d='MCT';
 var readerArr = [];
-var editorArr =['CHENGC01','CHENGC04'];
+var editorArr =['CH','C'];
 function setEditorsReaders(dept,readerArr,editorArr){
  var deptEntity = getDept(dept);
  var readers = deptEntity.customAttributes.readers;
@@ -34,7 +34,7 @@ setEditorsReaders(d,readerArr,editorArr);
 
 //compressed click code above - this one works
 /*
-function getDept(name){return ApplicationEntity.getResultSet(\"Company\").query(\"name = '\"+name+\"'\").elements().item(1);}function getPerson(userid){return ApplicationEntity.getResultSet(\"Person\").query(\"userID = '\"+userid+\"\'\").elements().item(1);}var d='\MCIT\';var readerArr = [];var editorArr =['CHENGC01','CHENGC04'];function setEditorsReaders(dept,readerArr,editorArr){var deptEntity = getDept(dept);var readers = deptEntity.customAttributes.readers;var editors = deptEntity.customAttributes.editors;var tempReaders = Person.createEntitySet();var tempEditors = Person.createEntitySet();if(readerArr!=null){for(var i=0;i\<\rreaderArr.length;i++){var reader =getPerson(readerArr[i]);readers.addElement(reader);}}if(editorArr!=null){for(var j=0;j\<\reditorArr.length;j++){var editor=getPerson(editorArr[j]);editors.addElement(editor);}}}setEditorsReaders(d,readerArr,editorArr);*/
+function getDept(name){return ApplicationEntity.getResultSet(\"Company\").query(\"name = '\"+name+\"'\").elements().item(1);}function getPerson(userid){return ApplicationEntity.getResultSet(\"Person\").query(\"userID = '\"+userid+\"\'\").elements().item(1);}var d='\MCT\';var readerArr = [];var editorArr =['C','CH'];function setEditorsReaders(dept,readerArr,editorArr){var deptEntity = getDept(dept);var readers = deptEntity.customAttributes.readers;var editors = deptEntity.customAttributes.editors;var tempReaders = Person.createEntitySet();var tempEditors = Person.createEntitySet();if(readerArr!=null){for(var i=0;i\<\rreaderArr.length;i++){var reader =getPerson(readerArr[i]);readers.addElement(reader);}}if(editorArr!=null){for(var j=0;j\<\reditorArr.length;j++){var editor=getPerson(editorArr[j]);editors.addElement(editor);}}}setEditorsReaders(d,readerArr,editorArr);*/
 
 (function(){           
 $.ajax({
