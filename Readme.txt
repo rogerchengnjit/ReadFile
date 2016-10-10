@@ -1,0 +1,1 @@
+A small utility that will read jscript (Click Commerce Proprietary Language) code as text file, convert data from the .CSV file and output it with the variables provided. Put the code in the click command console and it will bulk insert data in the Click Protal.
